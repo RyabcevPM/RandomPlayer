@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="RandomPlayer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RandomPlayer_jar</output-path>
+    <root id="archive" name="RandomPlayer.jar">
+      <element id="module-output" name="RandomPlayer" />
+    </root>
+  </artifact>
+</component>

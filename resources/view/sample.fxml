@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" minWidth="415.0" prefHeight="467.0" prefWidth="422.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="495.0" minWidth="415.0" prefWidth="415.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="410.0" minHeight="215.0" prefHeight="410.0" />
+      <RowConstraints maxHeight="314.0" minHeight="40.0" prefHeight="125.0" />
+   </rowConstraints>
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="196.0" prefWidth="415.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Numbers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="451.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="28.0" text="From" />
+                        <TextField id="edNumFrom" fx:id="edNumFrom" layoutX="61.0" layoutY="24.0" prefHeight="25.0" prefWidth="39.0" text="1" />
+                        <Label layoutX="118.0" layoutY="28.0" text="To" />
+                        <TextField id="edNumTo" fx:id="edNumTo" layoutX="140.0" layoutY="25.0" prefHeight="25.0" prefWidth="32.0" text="6" />
+                        <Label layoutX="198.0" layoutY="29.0" text="Count" />
+                        <TextField id="edRoundCount" fx:id="edRoundCount" layoutX="241.0" layoutY="24.0" prefHeight="25.0" prefWidth="47.0" text="10" />
+                        <CheckBox fx:id="bNoDuplicate" layoutX="25.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="110.0" selected="true" text="No duplicates" />
+                        <CheckBox fx:id="cbChangeColor" layoutX="25.0" layoutY="102.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="104.0" text="Change color" />
+                        <Label id="lBigNumber" fx:id="lBigNumber" alignment="CENTER" contentDisplay="CENTER" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="415.0" prefHeight="210.0" prefWidth="415.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Comic Sans MS" size="180.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Twister">
+            <content>
+                  <GridPane prefHeight="435.0" prefWidth="415.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="415.0">
+                           <children>
+                              <CheckBox fx:id="cbPlayer1" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" selected="true" text="player 1" />
+                              <CheckBox fx:id="cbPlayer2" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" selected="true" text="player 2" />
+                              <CheckBox fx:id="cbPlayer3" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" text="player 3" />
+                              <CheckBox fx:id="cbPlayer4" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" text="player 4" />
+                              <CheckBox fx:id="cbPlayer5" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" text="player 5" />
+                              <ComboBox fx:id="cboxPlayer1" layoutX="95.0" layoutY="15.0" prefHeight="25.0" prefWidth="189.0" />
+                              <ComboBox fx:id="cboxPlayer2" layoutX="95.0" layoutY="45.0" prefHeight="25.0" prefWidth="189.0" />
+                              <ComboBox fx:id="cboxPlayer3" layoutX="95.0" layoutY="76.0" prefHeight="25.0" prefWidth="189.0" />
+                              <ComboBox fx:id="cboxPlayer5" layoutX="95.0" layoutY="136.0" prefHeight="25.0" prefWidth="189.0" />
+                              <ComboBox fx:id="cboxPlayer4" layoutX="95.0" layoutY="106.0" prefHeight="25.0" prefWidth="189.0" />
+                              <Label id="lBigNumber" fx:id="lTwisterText" alignment="CENTER" contentDisplay="TOP" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="174.0" minWidth="415.0" prefHeight="174.0" prefWidth="415.0" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="50.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Pane prefHeight="111.0" prefWidth="406.0" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <children>
+            <Pane>
+               <children>
+                  <Slider id="slTimeInterval" fx:id="slTimeInterval" accessibleText="Speed" blockIncrement="1.0" layoutY="1.0" majorTickUnit="1.0" max="20.0" maxWidth="1.7976931348623157E308" min="0.5" minorTickCount="1" prefHeight="40.0" prefWidth="415.0" showTickLabels="true" showTickMarks="true" value="4.0">
+                     <padding>
+                        <Insets left="35.0" top="2.0" />
+                     </padding>
+                  </Slider>
+                  <Label text="Speed" />
+               </children>
+            </Pane>
+            <Button id="bPlay" fx:id="bPlay" layoutX="268.0" layoutY="50.0" mnemonicParsing="false" onAction="#OnPlay" prefHeight="25.0" prefWidth="58.0" text="Play" />
+            <Button id="bPause" fx:id="bPause" layoutX="346.0" layoutY="50.0" mnemonicParsing="false" onAction="#OnPause" text="Pause" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
